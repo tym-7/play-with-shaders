@@ -8,6 +8,16 @@ const kap = kaplay({
 });
 
 kap.loadSprite("pico", "pico.png");
+//kap.loadShaderURL("1", null, "shaders/1.frag");
+//kap.loadShaderURL("2", null, "shaders/2.frag");
+//kap.loadShaderURL("3", null, "shaders/3.frag");
+//kap.loadShaderURL("4", null, "shaders/4.frag");
+//kap.loadShaderURL("5", null, "shaders/5.frag");
+//kap.loadShaderURL("6", null, "shaders/6.frag");
+//kap.loadShaderURL("7", null, "shaders/7.frag");
+//kap.loadShaderURL("8", null, "shaders/8.frag");
+kap.loadShaderURL("9", null, "shaders/9.frag");
+
 
 kap.onLoad(() => {
   const pico = kap.add([
@@ -20,6 +30,6 @@ kap.onLoad(() => {
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "9") {
-        // add shader
+       pico.use(kap.shader("9"));
     }
 });
